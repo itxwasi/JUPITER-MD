@@ -13,7 +13,7 @@ var dlsize = 1000 // 1000mb
 cmd({
             pattern: "song2",
             react: "🎧",
-            alias :["son2","𝚢𝚝2"],
+            alias :["music","gana"],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
@@ -37,7 +37,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                },
                 caption: `
 
-🎧 *_${Config.botname}_* 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥🎧
+🎧 *JUPITER MD* 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥🎧
  ◨┉━━━━╚◭☬◮╝━━━━━┉◧
 
 ╏🎀 *Title:* ${anu.title}
@@ -77,7 +77,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 cmd({
             pattern: "1.1",
             react: "",
-            alias :[],
+            alias :["1"],
             desc: "",
             category: "downloader",
             filename: __filename,
@@ -90,7 +90,7 @@ if(!msg.quoted) return
 if (!msg.quoted.isBaileys ) return 
 if(!msg.quoted.caption) return console.log('ew')
 text = msg.quoted.caption
-if (!text.includes('🎧 *${Config.botname}_* 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥🎧'))  return 
+if (!text.includes('🎧 *JUPITER-MD* 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥🎧'))  return 
 text = text.split('╏📡 *Url* : ')[1].split('\n')[0]		
 if(!text) return 
 await Void.sendMessage(citel.chat, { react: {  text: "🎧", key: msg.key } } )			
@@ -104,7 +104,7 @@ await Void.sendMessage(citel.chat, { react: {  text: "🎧", key: msg.key } } )
         }
             let urlYt = text;
             if (!urlYt.startsWith("http")) {
-                citel.reply(`❌ Give youtube link!`);
+                citel.reply(`❌ OHHH SIR PLZ GIVE ME LINK!`);
                 return;
             }
             let infoYt = await ytdl.getInfo(urlYt);
@@ -152,7 +152,7 @@ await Void.sendMessage(citel.chat, { react: {  text: "🎧", key: msg.key } } )
 cmd({
             pattern: "2.1",
             react: "",
-            alias :[],
+            alias :["2"],
             desc: "",
             category: "downloader",
             filename: __filename,
@@ -165,7 +165,7 @@ if(!msg.quoted) return
 if (!msg.quoted.isBaileys ) return 
 if(!msg.quoted.caption) return console.log('ew')
 text = msg.quoted.caption
-if (!text.includes('🎧 *${Config.botname}_* 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥 🎧'))  return 
+if (!text.includes('🎧 *JUPITER MD* 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥 🎧'))  return 
 text = text.split('╏📡 *Url* : ')[1].split('\n')[0]		
 if(!text) return 
 await Void.sendMessage(citel.chat, { react: {  text: "⬇️", key: msg.key } } )			
